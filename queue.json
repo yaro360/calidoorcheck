@@ -1,0 +1,342 @@
+[
+ {
+  "id": "county:orange",
+  "type": "county",
+  "county": "Orange",
+  "title": "Orange County hub"
+ },
+ {
+  "id": "city:orange:anaheim",
+  "type": "city",
+  "county": "Orange",
+  "city": "Anaheim",
+  "title": "Anaheim (Orange County)"
+ },
+ {
+  "id": "city:orange:huntington-beach",
+  "type": "city",
+  "county": "Orange",
+  "city": "Huntington Beach",
+  "title": "Huntington Beach (Orange County)"
+ },
+ {
+  "id": "city:orange:orange",
+  "type": "city",
+  "county": "Orange",
+  "city": "Orange",
+  "title": "Orange (Orange County)"
+ },
+ {
+  "id": "city:orange:irvine",
+  "type": "city",
+  "county": "Orange",
+  "city": "Irvine",
+  "title": "Irvine (Orange County)"
+ },
+ {
+  "id": "city:orange:santa-ana",
+  "type": "city",
+  "county": "Orange",
+  "city": "Santa Ana",
+  "title": "Santa Ana (Orange County)"
+ },
+ {
+  "id": "city:orange:costa-mesa",
+  "type": "city",
+  "county": "Orange",
+  "city": "Costa Mesa",
+  "title": "Costa Mesa (Orange County)"
+ },
+ {
+  "id": "county:san-diego",
+  "type": "county",
+  "county": "San Diego",
+  "title": "San Diego County hub"
+ },
+ {
+  "id": "city:san-diego:san-diego",
+  "type": "city",
+  "county": "San Diego",
+  "city": "San Diego",
+  "title": "San Diego (San Diego County)"
+ },
+ {
+  "id": "city:san-diego:escondido",
+  "type": "city",
+  "county": "San Diego",
+  "city": "Escondido",
+  "title": "Escondido (San Diego County)"
+ },
+ {
+  "id": "city:san-diego:vista",
+  "type": "city",
+  "county": "San Diego",
+  "city": "Vista",
+  "title": "Vista (San Diego County)"
+ },
+ {
+  "id": "city:san-diego:el-cajon",
+  "type": "city",
+  "county": "San Diego",
+  "city": "El Cajon",
+  "title": "El Cajon (San Diego County)"
+ },
+ {
+  "id": "city:san-diego:oceanside",
+  "type": "city",
+  "county": "San Diego",
+  "city": "Oceanside",
+  "title": "Oceanside (San Diego County)"
+ },
+ {
+  "id": "city:san-diego:spring-valley",
+  "type": "city",
+  "county": "San Diego",
+  "city": "Spring Valley",
+  "title": "Spring Valley (San Diego County)"
+ },
+ {
+  "id": "county:riverside",
+  "type": "county",
+  "county": "Riverside",
+  "title": "Riverside County hub"
+ },
+ {
+  "id": "city:riverside:riverside",
+  "type": "city",
+  "county": "Riverside",
+  "city": "Riverside",
+  "title": "Riverside (Riverside County)"
+ },
+ {
+  "id": "city:riverside:corona",
+  "type": "city",
+  "county": "Riverside",
+  "city": "Corona",
+  "title": "Corona (Riverside County)"
+ },
+ {
+  "id": "city:riverside:murrieta",
+  "type": "city",
+  "county": "Riverside",
+  "city": "Murrieta",
+  "title": "Murrieta (Riverside County)"
+ },
+ {
+  "id": "city:riverside:moreno-valley",
+  "type": "city",
+  "county": "Riverside",
+  "city": "Moreno Valley",
+  "title": "Moreno Valley (Riverside County)"
+ },
+ {
+  "id": "city:riverside:menifee",
+  "type": "city",
+  "county": "Riverside",
+  "city": "Menifee",
+  "title": "Menifee (Riverside County)"
+ },
+ {
+  "id": "county:san-bernardino",
+  "type": "county",
+  "county": "San Bernardino",
+  "title": "San Bernardino County hub"
+ },
+ {
+  "id": "city:san-bernardino:ontario",
+  "type": "city",
+  "county": "San Bernardino",
+  "city": "Ontario",
+  "title": "Ontario (San Bernardino County)"
+ },
+ {
+  "id": "city:san-bernardino:rancho-cucamonga",
+  "type": "city",
+  "county": "San Bernardino",
+  "city": "Rancho Cucamonga",
+  "title": "Rancho Cucamonga (San Bernardino County)"
+ },
+ {
+  "id": "city:san-bernardino:san-bernardino",
+  "type": "city",
+  "county": "San Bernardino",
+  "city": "San Bernardino",
+  "title": "San Bernardino (San Bernardino County)"
+ },
+ {
+  "id": "city:san-bernardino:hesperia",
+  "type": "city",
+  "county": "San Bernardino",
+  "city": "Hesperia",
+  "title": "Hesperia (San Bernardino County)"
+ },
+ {
+  "id": "city:san-bernardino:apple-valley",
+  "type": "city",
+  "county": "San Bernardino",
+  "city": "Apple Valley",
+  "title": "Apple Valley (San Bernardino County)"
+ },
+ {
+  "id": "county:ventura",
+  "type": "county",
+  "county": "Ventura",
+  "title": "Ventura County hub"
+ },
+ {
+  "id": "city:ventura:simi-valley",
+  "type": "city",
+  "county": "Ventura",
+  "city": "Simi Valley",
+  "title": "Simi Valley (Ventura County)"
+ },
+ {
+  "id": "city:ventura:oxnard",
+  "type": "city",
+  "county": "Ventura",
+  "city": "Oxnard",
+  "title": "Oxnard (Ventura County)"
+ },
+ {
+  "id": "city:ventura:ventura",
+  "type": "city",
+  "county": "Ventura",
+  "city": "Ventura",
+  "title": "Ventura (Ventura County)"
+ },
+ {
+  "id": "city:ventura:thousand-oaks",
+  "type": "city",
+  "county": "Ventura",
+  "city": "Thousand Oaks",
+  "title": "Thousand Oaks (Ventura County)"
+ },
+ {
+  "id": "report:wc-la",
+  "type": "report",
+  "report": "wc_insured",
+  "county": "Los Angeles",
+  "slug": "los-angeles-county-garage-door-companies-workers-comp",
+  "title": "LA County: companies with workers' comp on file"
+ },
+ {
+  "id": "report:new-2026-la",
+  "type": "report",
+  "report": "new_licenses",
+  "year": 2026,
+  "county": "Los Angeles",
+  "slug": "new-garage-door-licenses-los-angeles-county-2026",
+  "title": "LA County: new D-28 licenses in 2026"
+ },
+ {
+  "id": "report:longest-la",
+  "type": "report",
+  "report": "longest_licensed",
+  "limit": 40,
+  "county": "Los Angeles",
+  "slug": "longest-licensed-garage-door-companies-los-angeles-county",
+  "title": "LA County: longest-licensed companies"
+ },
+ {
+  "id": "report:wc-orange",
+  "type": "report",
+  "report": "wc_insured",
+  "county": "Orange",
+  "slug": "orange-county-garage-door-companies-workers-comp",
+  "title": "Orange County: companies with workers' comp on file"
+ },
+ {
+  "id": "guide:garage-door-tune-up-cost",
+  "type": "guide",
+  "slug": "garage-door-tune-up-cost",
+  "title": "Tune-up cost + $97 trap"
+ },
+ {
+  "id": "guide:garage-door-cable-repair-cost",
+  "type": "guide",
+  "slug": "garage-door-cable-repair-cost",
+  "title": "Cable repair cost"
+ },
+ {
+  "id": "guide:garage-door-opener-replacement-cost",
+  "type": "guide",
+  "slug": "garage-door-opener-replacement-cost",
+  "title": "Opener replacement cost"
+ },
+ {
+  "id": "guide:written-estimate-checklist",
+  "type": "guide",
+  "slug": "written-estimate-checklist",
+  "title": "Written estimate checklist"
+ },
+ {
+  "id": "guide:torsion-vs-extension-springs",
+  "type": "guide",
+  "slug": "torsion-vs-extension-springs",
+  "title": "Torsion vs extension springs",
+  "needs_content_hint": "This Old House + Angi spring pages already cited"
+ },
+ {
+  "id": "guide:broken-garage-door-spring-what-to-do",
+  "type": "guide",
+  "slug": "broken-garage-door-spring-what-to-do",
+  "title": "Broken spring: what to do right now",
+  "needs_content_hint": "safety guidance from manufacturer manuals / This Old House"
+ },
+ {
+  "id": "guide:garage-door-off-track-what-to-do",
+  "type": "guide",
+  "slug": "garage-door-off-track-what-to-do",
+  "title": "Door off track: what to do",
+  "needs_content_hint": "manufacturer safety docs"
+ },
+ {
+  "id": "guide:garage-door-panel-replacement-cost",
+  "type": "guide",
+  "slug": "garage-door-panel-replacement-cost",
+  "title": "Panel replacement cost",
+  "needs_content_hint": "This Old House lists $440-$725"
+ },
+ {
+  "id": "guide:new-garage-door-cost-los-angeles",
+  "type": "guide",
+  "slug": "new-garage-door-cost-los-angeles",
+  "title": "New garage door cost (LA)",
+  "needs_content_hint": "need sourced ranges; TOH lists $970-$1,580 national"
+ },
+ {
+  "id": "guide:garage-door-sensor-not-working",
+  "type": "guide",
+  "slug": "garage-door-sensor-not-working",
+  "title": "Safety sensor troubleshooting",
+  "needs_content_hint": "LiftMaster/Chamberlain support docs"
+ },
+ {
+  "id": "guide:liftmaster-vs-chamberlain-vs-genie",
+  "type": "guide",
+  "slug": "liftmaster-vs-chamberlain-vs-genie",
+  "title": "LiftMaster vs Chamberlain vs Genie",
+  "needs_content_hint": "manufacturer spec pages"
+ },
+ {
+  "id": "guide:garage-door-repair-price-red-flags",
+  "type": "guide",
+  "slug": "garage-door-repair-price-red-flags",
+  "title": "Price red flags list",
+  "needs_content_hint": "ABC7 + BBB + CSLB"
+ },
+ {
+  "id": "guide:how-to-file-a-cslb-complaint",
+  "type": "guide",
+  "slug": "how-to-file-a-cslb-complaint",
+  "title": "How to file a CSLB complaint",
+  "needs_content_hint": "cslb.ca.gov complaint pages"
+ },
+ {
+  "id": "guide:gate-repair-licensed-d28",
+  "type": "guide",
+  "slug": "gate-repair-licensed-d28",
+  "title": "Gate repair: who is licensed (D-28)",
+  "needs_content_hint": "CSLB D-28 definition"
+ }
+]

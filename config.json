@@ -1,0 +1,8 @@
+{
+  "brand": "FairDoorLA",
+  "tagline": "Verify before you call.",
+  "site_url": "https://fairdoorla.example",
+  "site_url_note": "Placeholder. Change to the real domain before deploying; sitemap, canonical URLs and robots.txt use it.",
+  "core_county": "Los Angeles",
+  "counties": ["Los Angeles", "Orange", "Ventura", "Riverside", "San Bernardino", "San Diego"]
+}
