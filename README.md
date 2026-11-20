@@ -13,16 +13,24 @@ Static directory site. "Verify before you call."
 - `build.py` — generator → `site/` (pages, sitemap.xml, robots.txt, 404.html)
 - `publish_next.sh` — publish ONE queue item, rebuild, git commit, append `PUBLISH_LOG.md`
 - `refresh_data.sh` — re-download CSLB data, normalize, rebuild, commit
-- `config.json` — brand + `site_url` (placeholder `https://fairdoorla.example`; change before deploying)
+- `config.json` — brand + `site_url` (`https://yaro360.github.io/fairdoorla`; path prefix is derived from this)
+- `deploy.sh` — push the source branch and publish `site/` to the `gh-pages` branch (GitHub Pages)
+- `serve_local.sh` — local preview at the same path prefix as production
 
 ## Commands
 ```bash
 cd /workspace/garagedoor
-./publish_next.sh        # nightly: one new page
+./publish_next.sh        # nightly: one new page, commit, deploy to GitHub Pages
+./deploy.sh              # push source + publish site/ to gh-pages (does not add a queue page)
 ./refresh_data.sh        # weekly-ish: refresh CSLB data (licenses change daily)
 python3 build.py         # rebuild only
-cd site && python3 -m http.server 8080   # local preview
+./serve_local.sh         # local preview at http://127.0.0.1:8080/fairdoorla/
 ```
+
+## Live site
+- Site: https://yaro360.github.io/fairdoorla/
+- Repo: https://github.com/yaro360/fairdoorla
+- Pages source: `gh-pages` branch, root (`site/` contents plus `.nojekyll`)
 
 ## Data source
 CSLB Public Data Portal → List by Classification and County: https://www.cslb.ca.gov/onlineservices/dataportal/ListByCounty
@@ -33,4 +41,4 @@ Manual fallback: open the URL, select C-61/D-28 + counties (max 10 each), click 
 Guide items whose `content/guides/<slug>.html` doesn't exist are skipped (logged) until someone writes them with cited sources. Never invent prices or quotes.
 
 ## TODO
-- Lead form backend (form posts nowhere now), featured listings, corrections contact, real domain in config.json.
+- Lead form backend (form posts nowhere now), featured listings, corrections contact, custom domain (FairDoorLA.com is still unregistered; do not buy without approval).

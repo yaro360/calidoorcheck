@@ -1,8 +1,15 @@
 {
   "brand": "FairDoorLA",
   "tagline": "Verify before you call.",
-  "site_url": "https://fairdoorla.example",
-  "site_url_note": "Placeholder. Change to the real domain before deploying; sitemap, canonical URLs and robots.txt use it.",
+  "site_url": "https://yaro360.github.io/fairdoorla",
+  "site_url_note": "GitHub Pages project site. Internal links, canonicals, sitemap and robots use the /fairdoorla prefix derived from this URL. Change when a custom domain is attached.",
   "core_county": "Los Angeles",
-  "counties": ["Los Angeles", "Orange", "Ventura", "Riverside", "San Bernardino", "San Diego"]
+  "counties": [
+    "Los Angeles",
+    "Orange",
+    "Ventura",
+    "Riverside",
+    "San Bernardino",
+    "San Diego"
+  ]
 }

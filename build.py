@@ -2,13 +2,34 @@
 """FairDoorLA static site generator. Rebuilds site/ from data/, content/, queue.json and state/published.json."""
 import json, re, html, shutil, pathlib, datetime
 from collections import defaultdict
+from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT / "site"
 CFG = json.loads((ROOT / "config.json").read_text())
 BRAND, BASE = CFG["brand"], CFG["site_url"].rstrip("/")
+# Path prefix when hosted in a subdirectory (GitHub Pages project site).
+# Filesystem paths and PAGES entries stay unprefixed; HTML links, CSS, and the search index use PREFIX.
+PREFIX = urlparse(BASE).path.rstrip("/")
 TODAY = datetime.date.today().isoformat()
 E = lambda s: html.escape(str(s or ""), quote=True)
+
+def u(path):
+    """Turn a site-absolute path into a public URL path, including PREFIX."""
+    if not path.startswith("/"):
+        path = "/" + path
+    return PREFIX + path
+
+def prefix_hrefs(text):
+    """Rewrite root-absolute href/src so they work under PREFIX. Idempotent."""
+    if not PREFIX:
+        return text
+    def repl(m):
+        attr, path = m.group(1), m.group(2)
+        if path.startswith("//") or path == PREFIX or path.startswith(PREFIX + "/"):
+            return m.group(0)
+        return f'{attr}="{PREFIX}{path}"'
+    return re.sub(r'\b(href|src)="(/[^"]*)"', repl, text)
 
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 def county_path(c): return f"/garage-door-repair/{slug(c)}-county/"
@@ -87,6 +108,7 @@ def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None):
 <footer class="site"><div class="wrap"><p><strong>{BRAND}</strong> — {E(CFG["tagline"])} Company data: <a href="https://www.cslb.ca.gov/onlineservices/dataportal/ListByCounty">California Contractors State License Board public data</a>, downloaded {FETCHED}. Licenses change daily; always confirm on <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx">CSLB Instant License Check</a>. {BRAND} is not affiliated with CSLB.</p>
 <p><a href="/garage-door-repair/">All cities</a> · <a href="/about/">About &amp; methodology</a> · <a href="/sitemap.xml">Sitemap</a></p></div></footer>
 </body></html>"""
+    doc = prefix_hrefs(doc)
     f = OUT / path.lstrip("/") / "index.html"
     f.parent.mkdir(parents=True, exist_ok=True); f.write_text(doc)
     PAGES.append((path, lastmod or TODAY))
@@ -217,8 +239,8 @@ def build():
     for c in by_county:
         for city, rows in by_county[c].items():
             if not city_live(c, city): continue
-            search_idx[city.lower()] = city_path(c, city)
-            for r in rows: search_idx.setdefault(r["zip"], city_path(c, city))
+            search_idx[city.lower()] = u(city_path(c, city))
+            for r in rows: search_idx.setdefault(r["zip"], u(city_path(c, city)))
     top = sorted(core, key=lambda x: -len(core[x]))[:24]
     guides_html = "".join(f'<li><a href="{g["path"]}">{E(g["h1"])}</a></li>' for g in core_guides + pub_guides)
     body = f"""<section class="hero"><h1>Verify before you call.</h1>
@@ -242,7 +264,8 @@ def build():
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod></url>\n" for p, lm in sorted(PAGES)) + "</urlset>\n"
     (OUT / "sitemap.xml").write_text(sm)
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
-    (OUT / "404.html").write_text(f'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><div class="wrap"><h1>Page not found</h1><p><a href="/">{BRAND} home</a></p></div>')
+    (OUT / "404.html").write_text(prefix_hrefs(f'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><div class="wrap"><h1>Page not found</h1><p><a href="/">{BRAND} home</a></p></div>'))
+    (OUT / ".nojekyll").write_text("")
     return len(PAGES)
 
 if __name__ == "__main__":
