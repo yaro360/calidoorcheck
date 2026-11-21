@@ -11,7 +11,7 @@ fi
 tmp=$(mktemp -d)
 cleanup() { rm -rf "$tmp"; }
 trap cleanup EXIT
-mkdir -p "$tmp$PREFIX"
+mkdir -p "$(dirname "$tmp$PREFIX")"
 ln -s "$(pwd)/site" "$tmp$PREFIX"
 cat > "$tmp/index.html" <<HTML
 <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${PREFIX}/">
