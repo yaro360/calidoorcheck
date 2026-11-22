@@ -6,3 +6,4 @@
 | 2026-11-19 22:27 PST | `city:orange:anaheim` | Anaheim (Orange County) | `/garage-door-repair/orange-county/anaheim/` | 110 |
 | 2026-11-20 22:24 PST | `city:orange:huntington-beach` | Huntington Beach (Orange County) | `/garage-door-repair/orange-county/huntington-beach/` | 111 |
 | 2026-11-21 22:27 PST | `city:orange:orange` | Orange (Orange County) | `/garage-door-repair/orange-county/orange/` | 112 |
+| 2026-11-21 22:28 PST | `city:orange:irvine` | Irvine (Orange County) | `/garage-door-repair/orange-county/irvine/` | 113 |
