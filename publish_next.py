@@ -8,7 +8,7 @@ pub = json.loads(PUBF.read_text()) if PUBF.exists() else []
 done = {p["id"] for p in pub}
 now = datetime.datetime.now().astimezone()
 LOG = ROOT / "PUBLISH_LOG.md"
-if not LOG.exists(): LOG.write_text("# FairDoorLA publish log\n\n| When (local) | Queue id | Page | URL path | Pages in site |\n|---|---|---|---|---|\n")
+if not LOG.exists(): LOG.write_text("# CaliDoorCheck publish log\n\n| When (local) | Queue id | Page | URL path | Pages in site |\n|---|---|---|---|---|\n")
 
 def ready(q):
     if q["type"] == "guide": return (ROOT / "content" / "guides" / f'{q["slug"]}.html').exists()

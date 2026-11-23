@@ -5,12 +5,13 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-REPO_SLUG="${FAIRDOORLA_GITHUB_REPO:-yaro360/fairdoorla}"
-REMOTE="${FAIRDOORLA_GIT_REMOTE:-origin}"
+REPO_SLUG="${CALIDOORCHECK_GITHUB_REPO:-yaro360/calidoorcheck}"
+REMOTE="${CALIDOORCHECK_GIT_REMOTE:-origin}"
 PAGES_BRANCH="gh-pages"
 
 site_url=$(python3 -c 'import json; print(json.load(open("config.json"))["site_url"])')
-if [[ "$site_url" == *fairdoorla.example* ]]; then
+site_host=$(python3 -c 'import json; from urllib.parse import urlparse; print(urlparse(json.load(open("config.json"))["site_url"]).hostname or "")')
+if [[ "$site_url" == *example* ]]; then
   echo "deploy: site_url is still the placeholder. Set it in config.json first." >&2
   exit 1
 fi
@@ -20,6 +21,9 @@ if [[ ! -f site/index.html ]]; then
   exit 1
 fi
 touch site/.nojekyll
+if [[ -n "$site_host" && "$site_host" != *.github.io ]]; then
+  printf '%s\n' "$site_host" > site/CNAME
+fi
 
 # Ensure gh can talk to GitHub when we need to create the repo or enable Pages.
 gh_ok=0
@@ -34,7 +38,7 @@ if ! git remote get-url "$REMOTE" >/dev/null 2>&1; then
       echo "deploy: creating public repo $REPO_SLUG"
       # --source/--remote only when creating from this checkout; add remote ourselves for clarity.
       gh repo create "$REPO_SLUG" --public \
-        --description "FairDoorLA: licensed garage door repair directory for Los Angeles and SoCal" \
+        --description "CaliDoorCheck: licensed garage door repair directory for Los Angeles and SoCal" \
         --disable-wiki
     fi
     git remote add "$REMOTE" "https://github.com/${REPO_SLUG}.git"
@@ -70,26 +74,33 @@ if git -C "$work" diff --cached --quiet; then
   echo "deploy: site/ is empty, aborting." >&2
   exit 1
 fi
-git -C "$work" commit -q -m "Deploy FairDoorLA $(date +%Y-%m-%dT%H:%M:%S%z)"
+git -C "$work" commit -q -m "Deploy CaliDoorCheck $(date +%Y-%m-%dT%H:%M:%S%z)"
 git -C "$work" remote add origin "$(git remote get-url "$REMOTE")"
 echo "deploy: force-pushing $PAGES_BRANCH"
 git -C "$work" push -f origin "$PAGES_BRANCH"
 
 if [[ "$gh_ok" -eq 1 ]]; then
+  if [[ -n "$site_host" && "$site_host" != *.github.io ]]; then
+    pages_payload=$(PAGES_BRANCH="$PAGES_BRANCH" SITE_HOST="$site_host" python3 -c 'import json,os; print(json.dumps({"build_type":"legacy","cname":os.environ["SITE_HOST"],"source":{"branch":os.environ["PAGES_BRANCH"],"path":"/"}}))')
+  else
+    pages_payload=$(PAGES_BRANCH="$PAGES_BRANCH" python3 -c 'import json,os; print(json.dumps({"build_type":"legacy","source":{"branch":os.environ["PAGES_BRANCH"],"path":"/"}}))')
+  fi
   if gh api "repos/${REPO_SLUG}/pages" >/dev/null 2>&1; then
-    # Make sure Pages is serving from gh-pages root.
-    gh api --method PUT "repos/${REPO_SLUG}/pages" \
-      --input - >/dev/null <<JSON
-{"build_type":"legacy","source":{"branch":"${PAGES_BRANCH}","path":"/"}}
-JSON
+    # Make sure Pages is serving from gh-pages root, with custom domain when set.
+    printf '%s' "$pages_payload" | gh api --method PUT "repos/${REPO_SLUG}/pages" --input - >/dev/null
   else
     echo "deploy: enabling GitHub Pages from ${PAGES_BRANCH} /"
-    gh api --method POST "repos/${REPO_SLUG}/pages" \
-      --input - >/dev/null <<JSON
-{"build_type":"legacy","source":{"branch":"${PAGES_BRANCH}","path":"/"}}
-JSON
+    printf '%s' "$pages_payload" | gh api --method POST "repos/${REPO_SLUG}/pages" --input - >/dev/null
   fi
   echo "deploy: Pages source is ${PAGES_BRANCH} /"
+  if [[ -n "$site_host" && "$site_host" != *.github.io ]]; then
+    echo "deploy: custom domain set to $site_host"
+    if gh api --method PUT "repos/${REPO_SLUG}/pages" -F https_enforced=true >/dev/null 2>&1; then
+      echo "deploy: HTTPS enforcement enabled"
+    else
+      echo "deploy: HTTPS enforcement not ready yet (certificate may not exist until DNS points at GitHub). Continuing."
+    fi
+  fi
 else
   echo "deploy: pushed ${PAGES_BRANCH}, but gh is not authenticated so Pages could not be enabled via API. Enable it in the repo settings (gh-pages branch, /)." >&2
 fi

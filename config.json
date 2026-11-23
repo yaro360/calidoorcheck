@@ -1,8 +1,8 @@
 {
-  "brand": "FairDoorLA",
+  "brand": "CaliDoorCheck",
   "tagline": "Verify before you call.",
-  "site_url": "https://yaro360.github.io/fairdoorla",
-  "site_url_note": "GitHub Pages project site. Internal links, canonicals, sitemap and robots use the /fairdoorla prefix derived from this URL. Change when a custom domain is attached.",
+  "site_url": "https://calidoorcheck.com",
+  "site_url_note": "Custom domain on GitHub Pages. Internal links, canonicals, sitemap and robots use this origin with no path prefix.",
   "core_county": "Los Angeles",
   "counties": [
     "Los Angeles",

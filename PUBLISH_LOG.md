@@ -1,4 +1,4 @@
-# FairDoorLA publish log
+# CaliDoorCheck publish log
 
 | When (local) | Queue id | Page | URL path | Pages in site |
 |---|---|---|---|---|

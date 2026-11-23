@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Serve site/ under the same path prefix used in production (e.g. /fairdoorla/).
+# Serve site/ under the same path prefix used in production (none when site_url has no path).
 set -euo pipefail
 cd "$(dirname "$0")"
 PORT="${1:-8080}"
@@ -15,7 +15,7 @@ mkdir -p "$(dirname "$tmp$PREFIX")"
 ln -s "$(pwd)/site" "$tmp$PREFIX"
 cat > "$tmp/index.html" <<HTML
 <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${PREFIX}/">
-<p><a href="${PREFIX}/">FairDoorLA</a></p>
+<p><a href="${PREFIX}/">CaliDoorCheck</a></p>
 HTML
 echo "Serving at http://127.0.0.1:${PORT}${PREFIX}/"
 python3 -m http.server "$PORT" --directory "$tmp"

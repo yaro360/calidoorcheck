@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""FairDoorLA static site generator. Rebuilds site/ from data/, content/, queue.json and state/published.json."""
+"""CaliDoorCheck static site generator. Rebuilds site/ from data/, content/, queue.json and state/published.json."""
 import json, re, html, shutil, pathlib, datetime
 from collections import defaultdict
 from urllib.parse import urlparse
@@ -103,7 +103,7 @@ def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None):
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="website">
 <link rel="stylesheet" href="/assets/style.css">{sch}</head><body>
-<header class="site"><div class="wrap"><a class="logo" href="/">Fair<span>Door</span>LA</a><nav class="top">{nav}</nav></div></header>
+<header class="site"><div class="wrap"><a class="logo" href="/">Cali<span>Door</span>Check</a><nav class="top">{nav}</nav></div></header>
 <main><div class="wrap">{cr}{body}</div></main>
 <footer class="site"><div class="wrap"><p><strong>{BRAND}</strong> — {E(CFG["tagline"])} Company data: <a href="https://www.cslb.ca.gov/onlineservices/dataportal/ListByCounty">California Contractors State License Board public data</a>, downloaded {FETCHED}. Licenses change daily; always confirm on <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx">CSLB Instant License Check</a>. {BRAND} is not affiliated with CSLB.</p>
 <p><a href="/garage-door-repair/">All cities</a> · <a href="/about/">About &amp; methodology</a> · <a href="/sitemap.xml">Sitemap</a></p></div></footer>
@@ -227,7 +227,7 @@ def build():
     page("/garage-door-repair/", f"Garage Door Repair by City – CSLB-Licensed Pros in SoCal | {BRAND}", "Find CSLB-licensed garage door companies by city across Los Angeles County and Southern California.", body, crumbs=[("Home", "/"), ("Cities", "/garage-door-repair/")])
     # about
     page("/about/", f"About {BRAND} & Methodology", f"How {BRAND} builds its list of licensed garage door companies from CSLB public data.",
-         f"""<h1>About {BRAND}</h1><p class="lede">{BRAND} helps Southern California homeowners verify a garage door company before they call.</p>
+         f"""<h1>About {BRAND}</h1><p class="lede">{BRAND} helps Southern California homeowners verify a garage door company before they call. The directory currently covers Los Angeles, Orange, Ventura, Riverside, San Bernardino, and San Diego counties.</p>
 <h2>Where the company data comes from</h2><p>Every listing comes from the California Contractors State License Board's free <a href="https://www.cslb.ca.gov/onlineservices/dataportal/ListByCounty">List by Classification and County</a> download for classification C-61/D-28 (Doors, Gates &amp; Activating Devices), which contains currently renewed licenses. Last downloaded {FETCHED}. We show license number, business name, city, ZIP, phone, classifications, dates, bond surety and workers' comp status as published by CSLB. We do not show street addresses on listing pages.</p>
 <h2>What we don't do</h2><ul><li>We don't invent prices; price pages cite their sources.</li><li>We don't rank companies by payment. Any future paid placement will be labeled "Sponsored" and limited to CSLB-licensed companies.</li></ul>
 <h2>Corrections</h2><p>Licenses change daily. If a listing is wrong, CSLB's <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx">Instant License Check</a> is the source of truth. <!-- TODO: corrections contact email --></p>""",
@@ -266,6 +266,12 @@ def build():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
     (OUT / "404.html").write_text(prefix_hrefs(f'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><div class="wrap"><h1>Page not found</h1><p><a href="/">{BRAND} home</a></p></div>'))
     (OUT / ".nojekyll").write_text("")
+    host = urlparse(BASE).hostname or ""
+    cname = OUT / "CNAME"
+    if host and not host.endswith(".github.io"):
+        cname.write_text(host + "\n")
+    elif cname.exists():
+        cname.unlink()
     return len(PAGES)
 
 if __name__ == "__main__":

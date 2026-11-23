@@ -7,7 +7,7 @@ COUNTIES = {"19": "Los Angeles", "30": "Orange", "33": "Riverside", "36": "San B
 CLASSES = ["C-61/D-28"]
 RAW = pathlib.Path(__file__).resolve().parent.parent / "data" / "raw"
 RAW.mkdir(parents=True, exist_ok=True)
-s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (FairDoorLA data refresh)"
+s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (CaliDoorCheck data refresh)"
 def hidden(html):
     return {m.group(1): m.group(2) for m in re.finditer(r'<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"', html)}
 for cid, cname in COUNTIES.items():
