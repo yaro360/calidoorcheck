@@ -90,7 +90,18 @@ if [[ "$gh_ok" -eq 1 ]]; then
     printf '%s' "$pages_payload" | gh api --method PUT "repos/${REPO_SLUG}/pages" --input - >/dev/null
   else
     echo "deploy: enabling GitHub Pages from ${PAGES_BRANCH} /"
-    printf '%s' "$pages_payload" | gh api --method POST "repos/${REPO_SLUG}/pages" --input - >/dev/null
+    # Pushing a CNAME can enable Pages automatically, so POST may 409; fall back to PUT.
+    post_err=$(mktemp)
+    if ! printf '%s' "$pages_payload" | gh api --method POST "repos/${REPO_SLUG}/pages" --input - >/dev/null 2> "$post_err"; then
+      if grep -q 'already enabled' "$post_err"; then
+        printf '%s' "$pages_payload" | gh api --method PUT "repos/${REPO_SLUG}/pages" --input - >/dev/null
+      else
+        cat "$post_err" >&2
+        rm -f "$post_err"
+        exit 1
+      fi
+    fi
+    rm -f "$post_err"
   fi
   echo "deploy: Pages source is ${PAGES_BRANCH} /"
   if [[ -n "$site_host" && "$site_host" != *.github.io ]]; then
