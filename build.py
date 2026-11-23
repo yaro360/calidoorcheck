@@ -162,9 +162,27 @@ def find_licensed_html():
         '<a href="/garage-door-repair/">all cities</a>.</p>'
     )
 
+def icon_head():
+    """Favicon, manifest, theme color, and social image tags. Shared by page() and 404."""
+    og = BASE + "/assets/og-image.png"
+    alt = f"{BRAND} — {CFG['tagline']}"
+    return (
+        f'<meta name="theme-color" content="#0b6e4f">'
+        f'<link rel="icon" href="/favicon.ico" sizes="32x32">'
+        f'<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">'
+        f'<link rel="apple-touch-icon" href="/apple-touch-icon.png">'
+        f'<link rel="manifest" href="/site.webmanifest">'
+        f'<meta property="og:image" content="{og}">'
+        f'<meta property="og:image:width" content="1200">'
+        f'<meta property="og:image:height" content="630">'
+        f'<meta property="og:image:alt" content="{E(alt)}">'
+        f'<meta name="twitter:image" content="{og}">'
+        f'<meta name="twitter:image:alt" content="{E(alt)}">'
+    )
+
 def header_html(nav):
     return (
-        f'<header class="site"><div class="wrap"><a class="logo" href="/">Cali<span>Door</span>Check</a>'
+        f'<header class="site"><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" width="246" height="40" alt="{E(BRAND)}"></a>'
         f'<nav class="top">{nav}</nav></div></header>'
     )
 
@@ -175,10 +193,12 @@ def footer_html():
         f'Licenses change daily; always confirm on <a href="{CSLB_CHECK}">CSLB Instant License Check</a>. '
         f'{BRAND} is not affiliated with CSLB.</p>\n'
         f'<p><a href="/garage-door-repair/">All cities</a> · <a href="/about/">About &amp; methodology</a> · '
-        f'<a href="/sitemap.xml">Sitemap</a></p></div></footer>'
+        f'<a href="/sitemap.xml">Sitemap</a></p>'
+        f'<p class="photo-credit">Hero photo: <a href="https://unsplash.com/photos/modern-garage-doors-on-a-white-house-3qRx6B4cT6g">GoodLifeConstruction</a> / '
+        f'<a href="https://unsplash.com/license">Unsplash License</a></p></div></footer>'
     )
 
-def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None, og_type="website"):
+def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None, og_type="website", extra_head=""):
     url = BASE + path
     sch = "".join(ld_json(s) for s in (schema or []))
     if crumbs:
@@ -197,15 +217,17 @@ def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None, og_typ
     else:
         cr = ""
     nav = "".join(f'<a href="{h}">{E(t)}</a>' for h, t in NAV)
-    # Icon, apple-touch-icon, manifest, and og:image tags are owned by the branding pass — do not add them here.
+    body_class = "home" if path == "/" else "interior"
+    banner = "" if path == "/" else '<div class="page-banner" aria-hidden="true"></div>'
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="{E(og_type)}">
 <meta property="og:site_name" content="{E(BRAND)}"><meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{E(title)}"><meta name="twitter:description" content="{E(desc)}">
-<link rel="stylesheet" href="/assets/style.css">{sch}</head><body>
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}"><meta name="twitter:description" content="{E(desc)}">
+{icon_head()}
+<link rel="stylesheet" href="/assets/style.css">{extra_head}{sch}</head><body class="{body_class}">
 {header_html(nav)}
-<main><div class="wrap">{cr}{body}</div></main>
+{banner}<main><div class="wrap">{cr}{body}</div></main>
 {footer_html()}
 </body></html>"""
     doc = prefix_hrefs(doc)
@@ -474,6 +496,7 @@ def write_404(nav):
         f'<title>Page not found | {E(BRAND)}</title>\n'
         f'<meta name="description" content="That page is not on {E(BRAND)}. Find licensed garage door companies or return home.">\n'
         f'<meta name="robots" content="noindex">\n'
+        f'{icon_head()}'
         f'<link rel="stylesheet" href="/assets/style.css"></head><body>\n'
         f'{header_html(nav)}\n'
         f'<main><div class="wrap"><h1>Page not found</h1>\n'
@@ -499,6 +522,8 @@ def build():
     css_path = OUT / "assets" / "style.css"
     if css_path.exists():
         css_path.write_text(minify_css(css_path.read_text()))
+    for name in ("favicon.ico", "apple-touch-icon.png", "site.webmanifest"):
+        shutil.copy(ROOT / "assets" / name, OUT / name)
     extra_links = []
     for g in core_guides + pub_guides: build_guide(g)
     for c in live_counties:
@@ -524,6 +549,7 @@ def build():
          f"""<h1>About {BRAND}</h1>{data_updated_html(FETCHED)}<p class="lede">{BRAND} helps Southern California homeowners verify a garage door company before they call. The directory currently covers Los Angeles, Orange, Ventura, Riverside, San Bernardino, and San Diego counties.</p>
 <h2>Where the company data comes from</h2><p>Every listing comes from the California Contractors State License Board's free <a href="{CSLB_LIST}">List by Classification and County</a> download for classification C-61/D-28 (Doors, Gates &amp; Activating Devices), which contains currently renewed licenses. Last downloaded {FETCHED}. We show license number, business name, city, ZIP, phone, classifications, dates, bond surety and workers' comp status as published by CSLB. We do not show street addresses on listing pages.</p>
 <h2>What we don't do</h2><ul><li>We don't invent prices; price pages cite their sources.</li><li>We don't rank companies by payment. Any future paid placement will be labeled "Sponsored" and limited to CSLB-licensed companies.</li><li>We don't publish reviews or ratings.</li></ul>
+<h2>Photographs</h2><p>The home page photograph is <a href="https://unsplash.com/photos/modern-garage-doors-on-a-white-house-3qRx6B4cT6g">Modern garage doors on a white house</a> by <a href="https://unsplash.com/@goodlifeconstruction">GoodLifeConstruction</a>, used under the <a href="https://unsplash.com/license">Unsplash License</a>, which allows free commercial use without attribution. See <a href="/assets/CREDITS.md">photo credits</a> for the source, license, and file details.</p>
 <h2>Corrections</h2><p>Licenses change daily. If a listing is wrong, CSLB's <a href="{CSLB_CHECK}">Instant License Check</a> is the source of truth. <!-- TODO: corrections contact email --></p>""",
          crumbs=[("Home", "/"), ("About", "/about/")], lastmod=FETCHED)
     # home
@@ -538,7 +564,7 @@ def build():
     top = sorted(core, key=lambda x: -len(core[x]))[:24]
     all_guides = core_guides + pub_guides
     guides_html = "".join(f'<li><a href="{g["path"]}">{E(g["h1"])}</a></li>' for g in all_guides)
-    body = f"""<section class="hero"><h1>Verify before you call.</h1>
+    body = f"""<section class="hero hero-photo"><h1>Verify before you call.</h1>
 <p class="lede">Find garage door companies with an active California contractor license (CSLB D-28), see fair published prices, and learn the scam playbook — before anyone touches your door.</p>
 <form class="search" method="get" action="/" onsubmit="event.preventDefault();goSearch(this.q.value);">
 <input name="q" list="cities" placeholder="City or ZIP, e.g. Pasadena or 91101" aria-label="City or ZIP"><button class="btn">Search</button></form>
@@ -555,9 +581,13 @@ def build():
 function goSearch(v){{v=(v||"").trim().toLowerCase();var u=IDX[v];if(u){{location.href=u;return true}}var el=document.getElementById("nf");if(el)el.hidden=false;return false}}
 (function(){{var q=new URLSearchParams(location.search).get("q");if(!q)return;var input=document.querySelector('.search [name="q"]');if(input)input.value=q;goSearch(q)}})();</script>"""
     site_schema = [website_schema(), organization_schema()]
+    home_preload = (
+        '<link rel="preload" as="image" type="image/webp" fetchpriority="high" '
+        f'imagesrcset="{u("/assets/hero-800.webp")} 800w, {u("/assets/hero-1600.webp")} 1600w" imagesizes="100vw">'
+    )
     page("/", f"{BRAND} – Licensed Garage Door Repair in Los Angeles. Verify Before You Call.",
          f"Find CSLB-licensed garage door companies in Los Angeles and SoCal, check licenses, see sourced fair prices and avoid garage door repair scams.",
-         body, site_schema, crumbs=[("Home", "/")])
+         body, site_schema, crumbs=[("Home", "/")], extra_head=home_preload)
     # sitemap + robots + 404 + AEO files
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod></url>\n" for p, lm in sorted(PAGES)) + "</urlset>\n"
     (OUT / "sitemap.xml").write_text(sm)
