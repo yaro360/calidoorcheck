@@ -116,4 +116,15 @@ else
   echo "deploy: pushed ${PAGES_BRANCH}, but gh is not authenticated so Pages could not be enabled via API. Enable it in the repo settings (gh-pages branch, /)." >&2
 fi
 
+
+# Submit the published URLs to IndexNow (Bing, Yandex, and others).
+# Do not fail the deploy if the ping errors; the site is already pushed.
+if [[ -x ./indexnow.sh ]]; then
+  if ./indexnow.sh; then
+    echo "deploy: IndexNow ping succeeded"
+  else
+    echo "deploy: IndexNow ping failed (site was still deployed)." >&2
+  fi
+fi
+
 echo "deploy: live URL should be ${site_url}/"
