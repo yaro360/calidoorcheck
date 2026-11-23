@@ -12,7 +12,10 @@ The directory currently covers Los Angeles, Orange, Ventura, Riverside, San Bern
 - `content/guides/*.html` — sourced guide pages (`<!--META {json} -->` header with title, description, sources). `"core": true` pages are always built.
 - `queue.json` — nightly publish queue (county hubs + cities, then data reports, then guides)
 - `state/published.json` — which queue items are live
-- `build.py` — generator → `site/` (pages, sitemap.xml, robots.txt, 404.html, CNAME, .nojekyll)
+- `build.py` — generator → `site/` (pages, sitemap.xml, robots.txt, 404.html, CNAME, .nojekyll, llms.txt, llms-full.txt, IndexNow key file)
+- `indexnow.sh` — ping IndexNow with every URL in the sitemap (called from `deploy.sh`)
+- `scripts/check_site.py` — validate SEO/AEO markup and internal links in `site/`
+- `indexnow.key` — public IndexNow key (hosted at `/{key}.txt`)
 - `publish_next.sh` — publish ONE queue item, rebuild, git commit, append `PUBLISH_LOG.md`, deploy live
 - `refresh_data.sh` — re-download CSLB data, normalize, rebuild, commit
 - `config.json` — brand + `site_url` (`https://calidoorcheck.com`; no path prefix)
@@ -27,6 +30,8 @@ cd /workspace/garagedoor
 ./refresh_data.sh        # weekly-ish: refresh CSLB data (licenses change daily)
 python3 build.py         # rebuild only
 ./serve_local.sh         # local preview at http://127.0.0.1:8080/
+./indexnow.sh            # after a deploy: submit sitemap URLs to IndexNow
+python3 scripts/check_site.py  # SEO/AEO and link checks
 ```
 
 ## Live site

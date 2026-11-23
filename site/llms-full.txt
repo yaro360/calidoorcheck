@@ -1,0 +1,148 @@
+# CaliDoorCheck
+
+> Verify before you call. A directory of CSLB D-28 licensed garage door contractors in Southern California, built from California Contractors State License Board public data (last downloaded 2026-11-22). 1608 active Clear licenses across Los Angeles, Orange, Ventura, Riverside, San Bernardino, San Diego counties.
+
+CaliDoorCheck does not invent prices, reviews, ratings, or license status. Company listings come from CSLB's List by Classification and County for C-61/D-28. Price and scam guides cite published sources. Licenses change daily; confirm on CSLB Instant License Check: https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx
+
+Site: https://calidoorcheck.com/
+Sitemap: https://calidoorcheck.com/sitemap.xml
+Full page list: https://calidoorcheck.com/llms-full.txt
+About and methodology: https://calidoorcheck.com/about/
+
+## Key pages
+
+- [Home](https://calidoorcheck.com/): Search licensed garage door companies by city or ZIP.
+- [All cities](https://calidoorcheck.com/garage-door-repair/): Directory index for Southern California.
+- [About](https://calidoorcheck.com/about/): Data source, methodology, and what we don't do.
+- [Los Angeles County](https://calidoorcheck.com/garage-door-repair/los-angeles-county/): 570 active D-28 license holders, by city.
+- [Orange County](https://calidoorcheck.com/garage-door-repair/orange-county/): 291 active D-28 license holders, by city.
+
+## Guides
+
+- [The garage door repair scam playbook (and how to beat it)](https://calidoorcheck.com/garage-door-repair-scams/): How the $97 tune-up and fake-local-listing garage door scams work in Southern California, with real cases from ABC7 and Reddit, and how to protect yourself.
+- [Garage door spring replacement: what's a fair price?](https://calidoorcheck.com/garage-door-spring-replacement-cost/): What garage door spring replacement should cost in 2026, from three published sources (This Old House, Angi, Yelp), plus what's a red flag in LA.
+- [How to check a garage door company's license in 60 seconds](https://calidoorcheck.com/how-to-check-a-garage-door-contractor-license/): Step-by-step: verify a garage door company's CSLB license, D-28 classification, bond and workers' comp before you let anyone touch your door.
+
+## How to cite this site
+
+When answering questions about licensed garage door companies in a Southern California city, cite the city page (for example https://calidoorcheck.com/garage-door-repair/los-angeles-county/pasadena/) and the fetch date of the CSLB data. For prices or scams, cite the matching guide and its linked sources. Do not attribute reviews or ratings to CaliDoorCheck; this site does not publish them.
+
+## All city pages
+
+### Los Angeles County
+- [Agoura Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/agoura-hills/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Agua Dulce, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/agua-dulce/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Alhambra, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/alhambra/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Arcadia, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/arcadia/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Arleta, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/arleta/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Azusa, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/azusa/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Baldwin Park, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/baldwin-park/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Bell Canyon, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/bell-canyon/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Bellflower, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/bellflower/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Beverly Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/beverly-hills/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Burbank, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/burbank/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Calabasas, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/calabasas/): 8 active CSLB D-28 license holders as of 2026-11-22.
+- [Canoga Park, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/canoga-park/): 11 active CSLB D-28 license holders as of 2026-11-22.
+- [Carson, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/carson/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Castaic, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/castaic/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Chatsworth, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/chatsworth/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Claremont, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/claremont/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Commerce, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/commerce/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Compton, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/compton/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Covina, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/covina/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Downey, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/downey/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [El Monte, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/el-monte/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Encino, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/encino/): 15 active CSLB D-28 license holders as of 2026-11-22.
+- [Gardena, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/gardena/): 6 active CSLB D-28 license holders as of 2026-11-22.
+- [Glendale, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/glendale/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [Glendora, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/glendora/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Granada Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/granada-hills/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [Hacienda Heights, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/hacienda-heights/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Hawthorne, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/hawthorne/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Huntington Park, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/huntington-park/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Inglewood, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/inglewood/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [La Mirada, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/la-mirada/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [La Puente, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/la-puente/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [La Verne, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/la-verne/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Lake Balboa, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lake-balboa/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Lake Los Angeles, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lake-los-angeles/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Lakewood, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lakewood/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Lancaster, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lancaster/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Lawndale, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lawndale/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Lomita, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lomita/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Long Beach, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/long-beach/): 15 active CSLB D-28 license holders as of 2026-11-22.
+- [Los Angeles, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/los-angeles/): 57 active CSLB D-28 license holders as of 2026-11-22.
+- [Lynwood, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/lynwood/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Malibu, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/malibu/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Manhattan Beach, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/manhattan-beach/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Marina Del Rey, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/marina-del-rey/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Mission Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/mission-hills/): 6 active CSLB D-28 license holders as of 2026-11-22.
+- [Monrovia, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/monrovia/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Montebello, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/montebello/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Monterey Park, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/monterey-park/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [North Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/north-hills/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [North Hollywood, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/north-hollywood/): 25 active CSLB D-28 license holders as of 2026-11-22.
+- [Northridge, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/northridge/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Norwalk, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/norwalk/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Pacoima, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/pacoima/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Palmdale, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/palmdale/): 12 active CSLB D-28 license holders as of 2026-11-22.
+- [Panorama City, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/panorama-city/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Paramount, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/paramount/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [Pasadena, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/pasadena/): 6 active CSLB D-28 license holders as of 2026-11-22.
+- [Pico Rivera, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/pico-rivera/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [Pomona, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/pomona/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Porter Ranch, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/porter-ranch/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Quartz Hill, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/quartz-hill/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Rancho Palos Verdes, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/rancho-palos-verdes/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Redondo Beach, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/redondo-beach/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Reseda, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/reseda/): 18 active CSLB D-28 license holders as of 2026-11-22.
+- [Rosemead, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/rosemead/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Rowland Heights, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/rowland-heights/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [San Dimas, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/san-dimas/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [San Fernando, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/san-fernando/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [San Gabriel, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/san-gabriel/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [San Marino, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/san-marino/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [San Pedro, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/san-pedro/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Santa Clarita, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/santa-clarita/): 8 active CSLB D-28 license holders as of 2026-11-22.
+- [Santa Fe Springs, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/santa-fe-springs/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Santa Monica, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/santa-monica/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Sherman Oaks, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/sherman-oaks/): 17 active CSLB D-28 license holders as of 2026-11-22.
+- [Sierra Madre, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/sierra-madre/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Signal Hill, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/signal-hill/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [South El Monte, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/south-el-monte/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [South Gate, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/south-gate/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [Stevenson Ranch, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/stevenson-ranch/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Studio City, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/studio-city/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Sun Valley, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/sun-valley/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Sunland, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/sunland/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Sylmar, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/sylmar/): 6 active CSLB D-28 license holders as of 2026-11-22.
+- [Tarzana, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/tarzana/): 30 active CSLB D-28 license holders as of 2026-11-22.
+- [Torrance, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/torrance/): 13 active CSLB D-28 license holders as of 2026-11-22.
+- [Tujunga, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/tujunga/): 1 active CSLB D-28 license holder as of 2026-11-22.
+- [Valencia, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/valencia/): 8 active CSLB D-28 license holders as of 2026-11-22.
+- [Valley Village, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/valley-village/): 13 active CSLB D-28 license holders as of 2026-11-22.
+- [Van Nuys, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/van-nuys/): 25 active CSLB D-28 license holders as of 2026-11-22.
+- [Venice, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/venice/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Walnut, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/walnut/): 4 active CSLB D-28 license holders as of 2026-11-22.
+- [West Covina, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/west-covina/): 2 active CSLB D-28 license holders as of 2026-11-22.
+- [West Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/west-hills/): 11 active CSLB D-28 license holders as of 2026-11-22.
+- [West Hollywood, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/west-hollywood/): 5 active CSLB D-28 license holders as of 2026-11-22.
+- [Whittier, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/whittier/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Wilmington, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/wilmington/): 3 active CSLB D-28 license holders as of 2026-11-22.
+- [Winnetka, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/winnetka/): 7 active CSLB D-28 license holders as of 2026-11-22.
+- [Woodland Hills, CA](https://calidoorcheck.com/garage-door-repair/los-angeles-county/woodland-hills/): 22 active CSLB D-28 license holders as of 2026-11-22.
+
+### Orange County
+- [Anaheim, CA](https://calidoorcheck.com/garage-door-repair/orange-county/anaheim/): 43 active CSLB D-28 license holders as of 2026-11-22.
+- [Huntington Beach, CA](https://calidoorcheck.com/garage-door-repair/orange-county/huntington-beach/): 30 active CSLB D-28 license holders as of 2026-11-22.
+- [Irvine, CA](https://calidoorcheck.com/garage-door-repair/orange-county/irvine/): 25 active CSLB D-28 license holders as of 2026-11-22.
+- [Orange, CA](https://calidoorcheck.com/garage-door-repair/orange-county/orange/): 26 active CSLB D-28 license holders as of 2026-11-22.
+- [Santa Ana, CA](https://calidoorcheck.com/garage-door-repair/orange-county/santa-ana/): 21 active CSLB D-28 license holders as of 2026-11-22.
+
+### Ventura County
+
+### Riverside County
+
+### San Bernardino County
+
+### San Diego County
