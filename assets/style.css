@@ -83,4 +83,5 @@ html{overflow-x:hidden}
 @media(max-width:560px){
   .logo img{height:28px}
   .hero-photo{padding-top:40px;padding-bottom:48px}
+  .search .btn{flex-shrink:0;padding:12px 14px}
 }

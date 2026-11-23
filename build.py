@@ -579,7 +579,7 @@ def build():
 {FEATURED}<h2>Guides</h2><ul>{guides_html}</ul>{lead_form()}
 <script>var IDX={json.dumps(search_idx, separators=(",", ":"))};
 function goSearch(v){{v=(v||"").trim().toLowerCase();var u=IDX[v];if(u){{location.href=u;return true}}var el=document.getElementById("nf");if(el)el.hidden=false;return false}}
-(function(){{var q=new URLSearchParams(location.search).get("q");if(!q)return;var input=document.querySelector('.search [name="q"]');if(input)input.value=q;goSearch(q)}})();</script>"""
+(function(){{var input=document.querySelector('.search [name="q"]');if(!input)return;var mq=window.matchMedia("(max-width:560px)");function setPh(){{input.placeholder=mq.matches?"City or ZIP, e.g. Pasadena":"City or ZIP, e.g. Pasadena or 91101"}}setPh();if(mq.addEventListener)mq.addEventListener("change",setPh);else if(mq.addListener)mq.addListener(setPh);var q=new URLSearchParams(location.search).get("q");if(!q)return;input.value=q;goSearch(q)}})();</script>"""
     site_schema = [website_schema(), organization_schema()]
     home_preload = (
         '<link rel="preload" as="image" type="image/webp" fetchpriority="high" '
