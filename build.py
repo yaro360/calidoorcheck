@@ -186,6 +186,11 @@ def header_html(nav):
         f'<nav class="top">{nav}</nav></div></header>'
     )
 
+GOATCOUNTER_SCRIPT = (
+    '<script data-goatcounter="https://calidoorcheck.goatcounter.com/count" '
+    'async src="//gc.zgo.at/count.js"></script>'
+)
+
 def footer_html():
     return (
         f'<footer class="site"><div class="wrap"><p><strong>{BRAND}</strong> — {E(CFG["tagline"])} Company data: '
@@ -195,7 +200,8 @@ def footer_html():
         f'<p><a href="/garage-door-repair/">All cities</a> · <a href="/about/">About &amp; methodology</a> · '
         f'<a href="/sitemap.xml">Sitemap</a></p>'
         f'<p class="photo-credit">Hero photo: <a href="https://unsplash.com/photos/modern-garage-doors-on-a-white-house-3qRx6B4cT6g">GoodLifeConstruction</a> / '
-        f'<a href="https://unsplash.com/license">Unsplash License</a></p></div></footer>'
+        f'<a href="https://unsplash.com/license">Unsplash License</a></p>'
+        f'<p class="privacy-note">We use GoatCounter, a privacy-friendly analytics tool with no cookies and no personal data collected.</p></div></footer>'
     )
 
 def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None, og_type="website", extra_head=""):
@@ -229,6 +235,7 @@ def page(path, title, desc, body, schema=None, crumbs=None, lastmod=None, og_typ
 {header_html(nav)}
 {banner}<main><div class="wrap">{cr}{body}</div></main>
 {footer_html()}
+{GOATCOUNTER_SCRIPT}
 </body></html>"""
     doc = prefix_hrefs(doc)
     f = OUT / path.lstrip("/") / "index.html"
@@ -502,7 +509,7 @@ def write_404(nav):
         f'<main><div class="wrap"><h1>Page not found</h1>\n'
         f'<p>That address is not a page on {E(BRAND)}. Try a city from the directory, or go back to the home page.</p>\n'
         f'<p><a class="btn" href="/">Home</a> &nbsp; <a href="/garage-door-repair/">All cities</a></p>\n'
-        f'</div></main>\n{footer_html()}\n</body></html>'
+        f'</div></main>\n{footer_html()}\n{GOATCOUNTER_SCRIPT}\n</body></html>'
     )
     (OUT / "404.html").write_text(html_404)
 
@@ -550,6 +557,7 @@ def build():
 <h2>Where the company data comes from</h2><p>Every listing comes from the California Contractors State License Board's free <a href="{CSLB_LIST}">List by Classification and County</a> download for classification C-61/D-28 (Doors, Gates &amp; Activating Devices), which contains currently renewed licenses. Last downloaded {FETCHED}. We show license number, business name, city, ZIP, phone, classifications, dates, bond surety and workers' comp status as published by CSLB. We do not show street addresses on listing pages.</p>
 <h2>What we don't do</h2><ul><li>We don't invent prices; price pages cite their sources.</li><li>We don't rank companies by payment. Any future paid placement will be labeled "Sponsored" and limited to CSLB-licensed companies.</li><li>We don't publish reviews or ratings.</li></ul>
 <h2>Photographs</h2><p>The home page photograph is <a href="https://unsplash.com/photos/modern-garage-doors-on-a-white-house-3qRx6B4cT6g">Modern garage doors on a white house</a> by <a href="https://unsplash.com/@goodlifeconstruction">GoodLifeConstruction</a>, used under the <a href="https://unsplash.com/license">Unsplash License</a>, which allows free commercial use without attribution. See <a href="/assets/CREDITS.md">photo credits</a> for the source, license, and file details.</p>
+<h2>Privacy</h2><p>We use GoatCounter, a privacy-friendly analytics tool with no cookies and no personal data collected.</p>
 <h2>Corrections</h2><p>Licenses change daily. If a listing is wrong, CSLB's <a href="{CSLB_CHECK}">Instant License Check</a> is the source of truth. <!-- TODO: corrections contact email --></p>""",
          crumbs=[("Home", "/"), ("About", "/about/")], lastmod=FETCHED)
     # home

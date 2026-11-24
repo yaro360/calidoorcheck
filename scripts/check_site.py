@@ -140,9 +140,9 @@ def resolve(path_rel, href):
     parsed = urlparse(href)
     if parsed.scheme in skip_schemes:
         return None
-    if parsed.scheme in {"http", "https"}:
+    if parsed.scheme in {"http", "https"} or parsed.netloc:
         if parsed.hostname and parsed.hostname != HOST:
-            return None  # external
+            return None  # external, including protocol-relative //host/path
         path = parsed.path or "/"
     else:
         # relative or root-absolute
