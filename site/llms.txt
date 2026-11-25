@@ -16,6 +16,7 @@ About and methodology: https://calidoorcheck.com/about/
 - [About](https://calidoorcheck.com/about/): Data source, methodology, and what we don't do.
 - [Los Angeles County](https://calidoorcheck.com/garage-door-repair/los-angeles-county/): 570 active D-28 license holders, by city.
 - [Orange County](https://calidoorcheck.com/garage-door-repair/orange-county/): 291 active D-28 license holders, by city.
+- [San Diego County](https://calidoorcheck.com/garage-door-repair/san-diego-county/): 259 active D-28 license holders, by city.
 
 ## Guides
 

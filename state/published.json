@@ -26,5 +26,9 @@
  {
   "id": "city:orange:costa-mesa",
   "published_at": "2026-11-23T22:31:04-08:00"
+ },
+ {
+  "id": "county:san-diego",
+  "published_at": "2026-11-24T22:30:58-08:00"
  }
 ]
