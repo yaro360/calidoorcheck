@@ -13,3 +13,4 @@
 | 2026-11-24 22:38 PST | `city:san-diego:san-diego` | San Diego (San Diego County) | `/garage-door-repair/san-diego-county/san-diego/` | 117 |
 | 2026-11-25 22:30 PST | `city:san-diego:escondido` | Escondido (San Diego County) | `/garage-door-repair/san-diego-county/escondido/` | 118 |
 | 2026-11-26 22:23 PST | `city:san-diego:vista` | Vista (San Diego County) | `/garage-door-repair/san-diego-county/vista/` | 119 |
+| 2026-11-27 22:30 PST | `city:san-diego:el-cajon` | El Cajon (San Diego County) | `/garage-door-repair/san-diego-county/el-cajon/` | 120 |
